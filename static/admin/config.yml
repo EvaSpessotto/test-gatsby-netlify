@@ -2,7 +2,7 @@ backend:
   name: github
   repo: EvaSpessotto/test-gatsby-netlify
 
-media_folder: public/static/assets
+media_folder: static/assets
 public_folder: assets
 
 collections:
