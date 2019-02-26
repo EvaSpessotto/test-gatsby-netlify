@@ -1,40 +1,28 @@
-import React from "react"
-import PostLink from "../components/post-link"
+import React from 'react';
+import 'semantic-ui-css/semantic.min.css'
+import Layout from '../components/layout';
+import { Link } from 'gatsby'
+import { Button, Grid, Icon, Image } from 'semantic-ui-react';
 
-const IndexPage = ({
-  data: {
-    allMarkdownRemark: { edges },
-  },
-}) => {
-  const Posts = edges
-    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
+const IndexPage = () => {
+  return (
+    <Layout>
+      <Grid container textAlign='center'>
+        <Grid.Column style={{marginTop: '120px'}}>
+          <Image size='big' centered src='https://images.pexels.com/photos/1262972/pexels-photo-1262972.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' />
+          <h1>Bienvenue sur ce blog !</h1>
+          <h3>Découvrez nos super articles sur tout et n'importe quoi (youhou)</h3>
 
-  return(
-    <div>
-      <h1>Bienvenue sur ce blog de test</h1>
-      <p>Liste des articles publiés:</p>
-      {Posts}
-    </div>
-  ) 
+          <Button as={Link} to='/articles' size='huge' primary animated>
+            <Button.Content visible >Voir les articles</Button.Content>
+            <Button.Content hidden>
+              <Icon name='arrow right' />
+            </Button.Content>
+          </Button>
+        </Grid.Column>
+      </Grid>
+    </Layout>
+  )
 }
 
 export default IndexPage
-
-export const pageQuery = graphql`
-  query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
-      edges {
-        node {
-          id
-          excerpt(pruneLength: 250)
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            path
-            title
-          }
-        }
-      }
-    }
-  }
-`

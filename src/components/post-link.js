@@ -1,13 +1,15 @@
 import React from "react"
 import { Link } from "gatsby"
+import { Card } from 'semantic-ui-react';
 
 const PostLink = ({ post }) => (
-  <div>
-    <Link to={post.frontmatter.path} style={{color: 'black', textDecoration: 'inherit'}}>
-      <h2 style={{display: 'inline', color: '#31b6e9'}}>{post.frontmatter.title}</h2> 
-      <p style={{display: 'inline'}}> ({post.frontmatter.date})</p>
-    </Link>
-  </div>
+  <Card>
+    <Card.Content as={Link} to={post.frontmatter.path}>
+      <Card.Header>{post.frontmatter.title}</Card.Header>
+      <Card.Meta>{post.frontmatter.date}</Card.Meta>
+      <Card.Description>Matthew is a pianist living in Nashville.</Card.Description>
+    </Card.Content>
+  </Card>
 )
 
 export default PostLink
