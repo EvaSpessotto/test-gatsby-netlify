@@ -9,8 +9,8 @@ class Navbar extends Component {
   render() {
     const { activeItem } = this.state
     return (
-      <Menu size='massive' pointing borderless>
-        <Container >
+      <Menu size='massive' pointing borderless stackable>
+        <Container>
           <Menu.Item 
             as={Link}
             to='/'
