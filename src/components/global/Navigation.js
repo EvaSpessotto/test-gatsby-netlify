@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Menu, Container } from 'semantic-ui-react'
+import { Menu, Container, Dropdown } from 'semantic-ui-react'
 import { Link } from 'gatsby';
 
 
@@ -26,11 +26,13 @@ class Navbar extends Component {
             onClick={this.handleItemClick}
             position='right'
           />
-          <Menu.Item
-            name='Tags'
-            active={activeItem === 'Tags'}
-            onClick={this.handleItemClick}
-          />
+          <Dropdown item text='Tags'>
+            <Dropdown.Menu>
+              <Dropdown.Item>English</Dropdown.Item>
+              <Dropdown.Item>Russian</Dropdown.Item>
+              <Dropdown.Item>Spanish</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
         </Container>
       </Menu>
 

@@ -1,13 +1,20 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Card } from 'semantic-ui-react';
+import { Card, Button } from 'semantic-ui-react';
 
-const PostLink = ({ post }) => (
+const PostLink = ({ post:{ frontmatter } }) => (
   <Card fluid>
-    <Card.Content as={Link} to={post.frontmatter.path}>
-      <Card.Header>{post.frontmatter.title}</Card.Header>
-      <Card.Meta>{post.frontmatter.date}</Card.Meta>
+    <Card.Content as={Link} to={frontmatter.path}>
+      <Card.Header>{frontmatter.title}</Card.Header>
+      <Card.Meta>{frontmatter.date}</Card.Meta>
       <Card.Description>Matthew is a pianist living in Nashville.</Card.Description>
+      {
+        frontmatter.tag && frontmatter.tag.map((tag, index) => {
+          return (
+            <Button key={index}>{tag}</Button>
+          )
+        })
+      }
     </Card.Content>
   </Card>
 )
