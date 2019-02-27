@@ -19,7 +19,6 @@ export default function Template({
           style={{marginTop:'50px', marginBottom:'50px'}}
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
-          
         />
       </Container>
     </Layout>

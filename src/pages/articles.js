@@ -16,9 +16,9 @@ const Articles = ({
     <Layout>
       <Container style={{marginTop:'120px'}}>
         <h1>Tous les articles</h1>
-        <Card.Group>
-          {Posts}
-        </Card.Group>
+          <Card.Group>
+            {Posts}
+          </Card.Group>
       </Container>
     </Layout>
   )
