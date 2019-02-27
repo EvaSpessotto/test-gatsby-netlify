@@ -9,7 +9,7 @@ const PostLink = ({ post:{ frontmatter } }) => (
       <Card.Meta>{frontmatter.date}</Card.Meta>
       <Card.Description>Matthew is a pianist living in Nashville.</Card.Description>
       {
-        frontmatter.tag && frontmatter.tag.map((tag, index) => {
+        frontmatter.tags && frontmatter.tags.map((tag, index) => {
           return (
             <Button key={index}>{tag}</Button>
           )
