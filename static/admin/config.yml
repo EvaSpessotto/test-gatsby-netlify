@@ -14,6 +14,6 @@ collections:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
-      - { name: tags, label: Tags, widget: list }
+      - { name: tags, label: Tags (séparer les tags par une virgule et un espace), widget: list }
       - { name: body, label: Body, widget: markdown }
       
