@@ -3,14 +3,10 @@ import Layout from '../components/layout'
 import PostLink from "../components/post-link"
 import { Container, Card } from 'semantic-ui-react';
 
-const Articles = ({
-  data: {
-    allMarkdownRemark: { edges },
-  },
-}) => {
+const Articles = ({ data: { allMarkdownRemark: { edges } } }) => {
   const Posts = edges
     .filter(edge => !!edge.node.frontmatter.date)
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} tags={edge.node.frontmatter.tags} />)
+    .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
 
   return (
     <Layout>

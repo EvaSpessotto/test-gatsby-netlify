@@ -1,6 +1,5 @@
 module.exports = {
   plugins: [
-    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -8,6 +7,7 @@ module.exports = {
         name: "markdown-pages"
       }
     },
-    `gatsby-transformer-remark`
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-netlify-cms`,
   ]
 };
