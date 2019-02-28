@@ -57,7 +57,6 @@ Chaque itération va servir à améliorer ce MVP étape par étape et de manièr
 
 Une fois le MVP terminé, on peut commencer à mettre en place une nouvelle page d’accueil par exemple.
 
-**__**
 
 **_“Du coup Eva, c’est quoi les avantages de l’agilité ?”_** 
 
