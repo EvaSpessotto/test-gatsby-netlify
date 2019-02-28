@@ -1,6 +1,39 @@
 const path = require("path");
 const _ = require("lodash")
 
+const createTagPages = (createPage, posts) => {
+  const singleTagIndexTemplate = path.resolve('src/templates/singleTagIndex.js')
+
+  const postsByTag = {}
+
+  posts.forEach(({node}) => {
+    if (node.frontmatter.tags) {
+      node.frontmatter.tags.forEach(tag => {
+        if (!postsByTag[tag]) {
+          postsByTag[tag] = []
+        }
+
+        postsByTag[tag].push(node)
+      })
+    }
+  })
+
+  const tags  = Object.keys(postsByTag)
+  
+  tags.forEach(tagName => {
+    const posts = postsByTag[tagName]
+
+    createPage({
+      path: `/tags/${tagName}`,
+      component: singleTagIndexTemplate,
+      context: {
+        posts, 
+        tagName
+      }
+    })
+  })
+}
+
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
@@ -16,6 +49,8 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             frontmatter {
               path
+              title
+              date
               tags
             }
           }
@@ -26,6 +61,7 @@ exports.createPages = ({ actions, graphql }) => {
     if (result.errors) return Promise.reject(result.errors);
 
     const posts = result.data.allMarkdownRemark.edges
+    createTagPages(createPage, posts)
 
     posts.forEach(({ node }) => {
       createPage({
@@ -48,3 +84,5 @@ exports.createPages = ({ actions, graphql }) => {
 
   });
 };
+
+
