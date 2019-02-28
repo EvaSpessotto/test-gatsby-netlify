@@ -1,7 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
+import './blogTemplate.css';
 import Layout from '../components/layout';
-import { Container, Image, Label, Icon, Grid } from 'semantic-ui-react'
+import { Container, Label, Icon, Grid } from 'semantic-ui-react'
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -10,7 +11,7 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
   return (
     <Layout>
-      <Container className="blog-post" style={{ marginTop: '50px' }}>
+      <Container className="blog-post" style={{ marginTop: '3rem' }} text>
         <Grid>
           <Grid.Row>
             <Grid.Column>
@@ -30,7 +31,6 @@ export default function Template({
           <Grid.Row>
             <Grid.Column>
               <div
-                style={{ marginTop: '50px', marginBottom: '50px' }}
                 className="blog-post-content"
                 dangerouslySetInnerHTML={{ __html: html }}
               />

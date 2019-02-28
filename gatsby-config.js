@@ -7,7 +7,33 @@ module.exports = {
         name: "markdown-pages"
       }
     },
-    `gatsby-transformer-remark`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-relative-images`,
+            options: {
+              name: `assets`,
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 200,
+            },
+          },
+          {
+            resolve: `gatsby-remark-copy-linked-files`,
+            options: {
+              destinationDir: 'static',
+            },
+          },
+        ],
+      },
+    },
     `gatsby-plugin-netlify-cms`,
   ]
 };
