@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
   return (
     <div style={{display:'flex', flexDirection:'column'}}>
       <Navigation />
-        <div style={{minHeight:'100vh'}}>
+        <div style={{minHeight:'85vh', marginTop: '50px'}}>
           {children}
         </div>
       <Footer />

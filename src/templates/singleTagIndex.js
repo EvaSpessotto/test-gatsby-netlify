@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { Link } from 'gatsby';
 import { Grid, Container, Card, Icon, Label } from 'semantic-ui-react';
 import Layout from '../components/layout';
 
@@ -8,36 +8,40 @@ const SingleTagTemplate = ({ data, pageContext }) => {
   return (
     <Layout>
       <Container>
-        <div>
-          Posts about {`${tagName}`}
-        </div>
-        <div>
-          <Card.Group>
-            {
-              posts.map((post, index) => {
-                return (
-                  <Card key={index} fluid>
-                    <Card.Content>
-                      <Card.Header as={Link} to={post.frontmatter.path}>{post.frontmatter.title}</Card.Header>
-                      <Card.Meta>{post.frontmatter.date}</Card.Meta>
-                      <Card.Description>
-                        {
-                          post.frontmatter.tags && post.frontmatter.tags.map((tag, index) => {
-                            return (
-                              <Label key={index}>
-                                <Icon name="tag" />{tag}
-                              </Label>
-                            )
-                          })
-                        }
-                      </Card.Description>
-                    </Card.Content>
-                  </Card>
-                )
-              })
-            }
-          </Card.Group>
-        </div>
+        <Grid>
+          <Grid.Row>
+            <h1>Posts about {`${tagName}`}</h1>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column>
+              <Card.Group>
+                {
+                  posts.map((post, index) => {
+                    return (
+                      <Card key={index} fluid>
+                        <Card.Content>
+                          <Card.Header as={Link} to={post.frontmatter.path}>{post.frontmatter.title}</Card.Header>
+                          <Card.Meta>{post.frontmatter.date}</Card.Meta>
+                          <Card.Description>
+                            {
+                              post.frontmatter.tags && post.frontmatter.tags.map((tag, index) => {
+                                return (
+                                  <Label key={index} as={Link} to={`/tags/${tag}`}>
+                                    <Icon name="tag" />{tag}
+                                  </Label>
+                                )
+                              })
+                            }
+                          </Card.Description>
+                        </Card.Content>
+                      </Card>
+                    )
+                  })
+                }
+              </Card.Group>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
       </Container>
     </Layout>
   )

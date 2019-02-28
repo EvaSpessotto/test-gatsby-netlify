@@ -50,7 +50,7 @@ exports.createPages = ({ actions, graphql }) => {
             frontmatter {
               path
               title
-              date
+              date(formatString: "MMMM DD, YYYY")
               tags
             }
           }

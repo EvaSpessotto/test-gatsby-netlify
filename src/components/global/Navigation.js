@@ -28,7 +28,7 @@ class Navbar extends Component {
       `}
         render={data => (
 
-          <Menu size='massive' pointing borderless stackable>
+          <Menu size='massive' fixed="top" pointing borderless stackable>
             <Container>
               <Menu.Item
                 as={Link}

@@ -11,7 +11,7 @@ const PostLink = ({ post:{ frontmatter } }) => (
       {
         frontmatter.tags && frontmatter.tags.map((tag, index) => {
           return (
-            <Label key={index}>
+            <Label key={index} as={Link} to={`/tags/${tag}`}>
               <Icon name="tag" />{tag}
             </Label>
           )
