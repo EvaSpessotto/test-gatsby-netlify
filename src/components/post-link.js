@@ -1,13 +1,15 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Card, Label, Icon } from 'semantic-ui-react';
+import { Card, Label, Icon, Image } from 'semantic-ui-react';
 
-const PostLink = ({ post:{ frontmatter } }) => (
-  <Card fluid>
-    <Card.Content >
+const PostLink = ({ post: { frontmatter } }) => (
+  <Card>
+    <Image src={frontmatter.thumbnail} />
+    <Card.Content>
       <Card.Header as={Link} to={frontmatter.path}>{frontmatter.title}</Card.Header>
       <Card.Meta>{frontmatter.date}</Card.Meta>
-      <Card.Description></Card.Description>
+    </Card.Content>
+    <Card.Content extra>
       {
         frontmatter.tags && frontmatter.tags.map((tag, index) => {
           return (

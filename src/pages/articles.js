@@ -6,13 +6,13 @@ import { Container, Card, Image } from 'semantic-ui-react';
 const Articles = ({ data: { allMarkdownRemark: { edges } } }) => {
   const Posts = edges
     .filter(edge => !!edge.node.frontmatter.date)
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
+    .map(edge => <PostLink key={edge.node.id} post={edge.node}  />)
 
   return (
     <Layout>
       <Container style={{marginTop:'120px'}}>
         <h1>Tous les articles</h1>
-        <Card.Group>
+        <Card.Group itemsPerRow={4}>
           {Posts}
         </Card.Group>
       </Container>
@@ -35,6 +35,7 @@ export const pageQuery = graphql`
             path
             title
             tags
+            thumbnail
           }
         }
       }

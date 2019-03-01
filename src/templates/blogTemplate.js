@@ -18,7 +18,6 @@ export default function Template({
             <Grid.Column>
               <h1>{frontmatter.title}</h1>
               <h4>{frontmatter.date}</h4>
-              <Image src={`/static/${frontmatter.thumbnail}`} />
               {
                 frontmatter.tags && frontmatter.tags.map((tag, index) => {
                   return (
@@ -28,6 +27,11 @@ export default function Template({
                   )
                 })
               }
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column>
+              <Image src={`${frontmatter.thumbnail}`} />
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
@@ -53,6 +57,7 @@ export const pageQuery = graphql`
         path
         title
         tags
+        thumbnail
       }
     }
   }

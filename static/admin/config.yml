@@ -3,7 +3,7 @@ backend:
   repo: EvaSpessotto/test-gatsby-netlify
 
 media_folder: static/assets
-public_folder: assets
+public_folder: /assets
 
 publish_mode: editorial_workflow
 
