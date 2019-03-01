@@ -26,7 +26,7 @@ class Navbar extends Component {
       `}
         render={data => (
 
-          <Menu size='massive' borderless stackable style={{boxShadow: 'none', border:'none', margin: '0'}}>
+          <Menu borderless stackable style={{boxShadow: 'none', border:'none', margin: '0'}}>
             <Container>
               <Menu.Item
                 as={Link}
