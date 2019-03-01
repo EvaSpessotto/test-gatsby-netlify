@@ -1,6 +1,6 @@
 ---
 path: /blog/new-post
-draft: true
+draft: false
 title: 'La gestion de projet, toute une organisation'
 date: 2019-02-28T14:48:11.952Z
 author: Eva
