@@ -10,10 +10,8 @@ const Articles = ({ data: { allMarkdownRemark: { edges } } }) => {
 
   return (
     <Layout>
-      <Image src="https://www.oboqo.com/wp-inside/uploads/2018/01/site-wordpress.jpg" fluid/>
       <Container style={{marginTop:'120px'}}>
         <h1>Tous les articles</h1>
-        
         <Card.Group>
           {Posts}
         </Card.Group>

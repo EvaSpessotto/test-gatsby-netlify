@@ -20,7 +20,7 @@ export default function Template({
               {
                 frontmatter.tags && frontmatter.tags.map((tag, index) => {
                   return (
-                    <Label key={index}>
+                    <Label key={index} color="teal">
                       <Icon name="tag" />{tag}
                     </Label>
                   )

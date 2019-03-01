@@ -7,8 +7,7 @@ const Footer = () => {
     <Grid>
       <Grid.Column >
         <Container textAlign='right' >
-          <Segment vertical></Segment>
-          <List bulleted horizontal style={{ marginTop: '20px' }}>
+          <List bulleted horizontal style={{marginTop: '3rem'}}>
             <List.Item>A propos de SuperBlog</List.Item>
             <List.Item>Nous contacter</List.Item>
             <List.Item>Mentions Légales</List.Item>

@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { Grid, Container, Card, Icon, Label } from 'semantic-ui-react';
+import { Grid, Container, Card, Icon, Label, Image } from 'semantic-ui-react';
 import Layout from '../components/layout';
 
 const SingleTagTemplate = ({ data, pageContext }) => {
   const { posts, tagName } = pageContext
   return (
     <Layout>
-      <Container>
-        <Grid>
+      <Container style={{marginTop:'120px'}}>
+        <Grid >
           <Grid.Row>
             <h1>Posts about {`${tagName}`}</h1>
           </Grid.Row>
@@ -26,7 +26,7 @@ const SingleTagTemplate = ({ data, pageContext }) => {
                             {
                               post.frontmatter.tags && post.frontmatter.tags.map((tag, index) => {
                                 return (
-                                  <Label key={index} as={Link} to={`/tags/${tag}`}>
+                                  <Label key={index} as={Link} to={`/tags/${tag}`} color="teal">
                                     <Icon name="tag" />{tag}
                                   </Label>
                                 )

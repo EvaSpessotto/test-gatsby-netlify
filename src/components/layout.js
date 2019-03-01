@@ -5,9 +5,9 @@ import Footer from './global/Footer'
 
 const Layout = ({ children }) => {
   return (
-    <div style={{display:'flex', flexDirection:'column'}}>
+    <div style={{display:'flex', flexDirection:'column', minHeight:'100vh'}}>
       <Navigation />
-        <div style={{minHeight:'85vh', marginTop: '50px'}}>
+        <div style={{flex:'1 0 auto', width:'100%'}}>
           {children}
         </div>
       <Footer />

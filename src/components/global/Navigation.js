@@ -11,8 +11,6 @@ class Navbar extends Component {
   render() {
     const { activeItem } = this.state
 
-    console.log()
-
     return (
 
       <StaticQuery
@@ -28,7 +26,7 @@ class Navbar extends Component {
       `}
         render={data => (
 
-          <Menu size='massive' fixed="top" pointing borderless stackable>
+          <Menu size='massive' borderless stackable style={{boxShadow: 'none', border:'none', margin: '0'}}>
             <Container>
               <Menu.Item
                 as={Link}
@@ -45,7 +43,7 @@ class Navbar extends Component {
                 onClick={this.handleItemClick}
                 position='right'
               />
-              <Dropdown item text='Tags'>
+              <Dropdown item text='Tags' >
                 <Dropdown.Menu>
                   {
                     data.allMarkdownRemark.group.map((tag, index) => (
