@@ -1,7 +1,10 @@
 ---
 path: /blog/new-post
-date: 2019-02-28T14:48:11.952Z
+draft: true
 title: 'La gestion de projet, toute une organisation'
+date: 2019-02-28T14:48:11.952Z
+author: Eva
+thumbnail: /assets/kanban.png
 tags:
   - new
   - react
