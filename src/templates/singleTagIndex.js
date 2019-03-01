@@ -7,7 +7,7 @@ const SingleTagTemplate = ({ data, pageContext }) => {
   const { posts, tagName } = pageContext
   return (
     <Layout>
-      <Container style={{marginTop:'120px'}}>
+      <Container style={{ marginTop: '120px' }}>
         <Grid >
           <Grid.Row>
             <h1>Posts about {`${tagName}`}</h1>

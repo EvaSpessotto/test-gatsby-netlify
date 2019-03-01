@@ -1,4 +1,5 @@
 ---
+path: /blog/test-avec-pleins-de-params
 draft: false
 title: Test avec pleins de nouveau champs
 date: 2019-03-01T14:29:28.897Z

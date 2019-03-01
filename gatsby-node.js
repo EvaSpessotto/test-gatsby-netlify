@@ -52,6 +52,7 @@ exports.createPages = ({ actions, graphql }) => {
               title
               date(formatString: "MMMM DD, YYYY")
               tags
+              thumbnail
             }
           }
         }
