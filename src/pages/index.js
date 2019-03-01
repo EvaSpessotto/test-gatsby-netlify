@@ -2,7 +2,7 @@ import React from 'react';
 import 'semantic-ui-css/semantic.min.css'
 import Layout from '../components/layout';
 import { Link } from 'gatsby'
-import { Button, Grid, Icon, Image, Container, Header, Segment } from 'semantic-ui-react';
+import { Button, Container, Header, Segment } from 'semantic-ui-react';
 
 const style = {
   background: "#08AEEA",

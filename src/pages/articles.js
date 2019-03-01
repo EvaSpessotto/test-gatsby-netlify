@@ -1,7 +1,8 @@
 import React from 'react'
 import Layout from '../components/layout'
 import PostLink from "../components/post-link"
-import { Container, Card, Image, Grid } from 'semantic-ui-react';
+import { Container, Card, Grid } from 'semantic-ui-react';
+
 
 const Articles = ({ data: { allMarkdownRemark: { edges } } }) => {
   const Posts = edges
@@ -14,7 +15,7 @@ const Articles = ({ data: { allMarkdownRemark: { edges } } }) => {
         <Grid >
           <Grid.Row>
             <Grid.Column>
-              <h1>Tous les articles</h1>
+              <h1 className="test">Tous les articles</h1>
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
