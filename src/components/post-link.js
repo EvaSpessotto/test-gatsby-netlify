@@ -4,7 +4,7 @@ import { Card, Label, Icon, Image } from 'semantic-ui-react';
 
 const PostLink = ({ post: { frontmatter } }) => (
   <Card>
-    <Image src={frontmatter.thumbnail} />
+    <Image src={frontmatter.thumbnail && frontmatter.thumbnail} />
     <Card.Content>
       <Card.Header as={Link} to={frontmatter.path}>{frontmatter.title}</Card.Header>
       <Card.Meta>{frontmatter.date}</Card.Meta>

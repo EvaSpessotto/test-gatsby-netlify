@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { Grid, Container, Card, Icon, Label, Image } from 'semantic-ui-react';
 import Layout from '../components/layout';
+import PostLink from '../components/post-link'
 
 const SingleTagTemplate = ({ data, pageContext }) => {
   const { posts, tagName } = pageContext
@@ -17,22 +18,24 @@ const SingleTagTemplate = ({ data, pageContext }) => {
               <Card.Group>
                 {
                   posts.map((post, index) => {
+                    const { frontmatter } = post;
                     return (
-                      <Card key={index} fluid>
+                      <Card key={index}>
+                        <Image src={frontmatter.thumbnail} />
                         <Card.Content>
-                          <Card.Header as={Link} to={post.frontmatter.path}>{post.frontmatter.title}</Card.Header>
-                          <Card.Meta>{post.frontmatter.date}</Card.Meta>
-                          <Card.Description>
-                            {
-                              post.frontmatter.tags && post.frontmatter.tags.map((tag, index) => {
-                                return (
-                                  <Label key={index} as={Link} to={`/tags/${tag}`} color="teal">
-                                    <Icon name="tag" />{tag}
-                                  </Label>
-                                )
-                              })
-                            }
-                          </Card.Description>
+                          <Card.Header as={Link} to={frontmatter.path}>{frontmatter.title}</Card.Header>
+                          <Card.Meta>{frontmatter.date}</Card.Meta>
+                        </Card.Content>
+                        <Card.Content extra>
+                          {
+                            frontmatter.tags && frontmatter.tags.map((tag, index) => {
+                              return (
+                                <Label key={index} as={Link} to={`/tags/${tag}`} color="teal">
+                                  <Icon name="tag" />{tag}
+                                </Label>
+                              )
+                            })
+                          }
                         </Card.Content>
                       </Card>
                     )
