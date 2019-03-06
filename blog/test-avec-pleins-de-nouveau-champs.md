@@ -4,7 +4,7 @@ draft: false
 title: Lorem Ipsum
 date: 2019-03-01T14:29:28.897Z
 author: Eva
-thumbnail: /assets/trello.png
+thumbnail: /assets/dunes.jpeg
 tags:
   - GatsbyJS
   - SemanticUI
