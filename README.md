@@ -15,13 +15,20 @@ Pour en savoir plus sur mon choix de stack: [Lire mon article sur les technos ch
 ## :rocket: Quick Start:
 
  #### 1. Clonez ce répo
+
+      ```git clone https://github.com/EvaSpessotto/test-gatsby-netlify.git```
+
  #### 2. Installez les node_modules 
   Positonnez vous dans le dossier qui vient d'être créée:
+
       ```cd test-gatsby-netlify```
 
   Puis installez les dépendances avec
       ```npm install``` ou ```yarn```
  #### 3. Démarrez l'application
-      ```gatsby develop```
+
+      ```
+        gatsby develop
+      ```
   L'application tourne à l'adresse ```http://localhost:8000```
   
