@@ -8,7 +8,7 @@ Dans le cadre de la refonte du site de [commit42](https://www.commit42.fr/), j'a
 Pour en savoir plus sur mon choix de stack: [Lire mon article sur les technos choisies](https://www.commit42.fr/blog/un-nouveau-site-pour-une-nouvelle-annee/)
 
 
-## Demo :fire:
+## :fire: Demo 
 
 [Voir la démo](https://gatsby-netlifycms-test.netlify.com/)
 
@@ -16,8 +16,7 @@ Pour en savoir plus sur mon choix de stack: [Lire mon article sur les technos ch
 
  #### 1. Clonez ce répo
  #### 2. Installez les node_modules 
-    Positonnez vous dans le dossier qui vient d'être créée:
-
+  Positonnez vous dans le dossier qui vient d'être créée:
       ```cd test-gatsby-netlify```
 
   Puis installez les dépendances avec
