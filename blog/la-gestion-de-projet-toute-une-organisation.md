@@ -9,6 +9,7 @@ tags:
   - new
   - react
   - test
+  - other
 ---
 
 Si vous avez lu mon article précédent, vous savez que j’ai du faire le choix d’une stack pour la refonte du site de commit42 afin de répondre à certains besoins. Pour les autres, et bien, vous êtes à présent au courant 😁 (mais vous pouvez quand même aller lire [l’article](https://www.commit42.fr/blog/un-nouveau-site-pour-une-nouvelle-annee/)).
