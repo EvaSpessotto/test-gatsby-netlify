@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, List, Segment, Container } from 'semantic-ui-react'
+import { Grid, List, Container } from 'semantic-ui-react'
 
 const Footer = () => {
 
