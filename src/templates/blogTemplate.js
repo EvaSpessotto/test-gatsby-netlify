@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import './blogTemplate.css';
 import Layout from '../components/layout';
 import { Container, Label, Icon, Grid, Image } from 'semantic-ui-react'
@@ -21,7 +21,7 @@ export default function Template({
               {
                 frontmatter.tags && frontmatter.tags.map((tag, index) => {
                   return (
-                    <Label key={index} color="teal">
+                    <Label key={index} color="teal" as={Link} to={`/tags/${tag}`}>
                       <Icon name="tag" />{tag}
                     </Label>
                   )

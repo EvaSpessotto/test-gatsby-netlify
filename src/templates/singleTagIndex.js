@@ -21,7 +21,7 @@ const SingleTagTemplate = ({ data, pageContext }) => {
                     const { frontmatter } = post;
                     return (
                       <Card key={index}>
-                        <Image src={frontmatter.thumbnail} />
+                        <Image src={frontmatter.thumbnail} style={{height:'200px'}} />
                         <Card.Content>
                           <Card.Header as={Link} to={frontmatter.path}>{frontmatter.title}</Card.Header>
                           <Card.Meta>{frontmatter.date}</Card.Meta>
@@ -30,7 +30,7 @@ const SingleTagTemplate = ({ data, pageContext }) => {
                           {
                             frontmatter.tags && frontmatter.tags.map((tag, index) => {
                               return (
-                                <Label key={index} as={Link} to={`/tags/${tag}`} color="teal">
+                                <Label key={index} as={Link} to={`/tags/${tag}`} color="teal"  style={{marginBottom:'5px'}}>
                                   <Icon name="tag" />{tag}
                                 </Label>
                               )

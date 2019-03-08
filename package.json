@@ -26,12 +26,8 @@
     "netlify-cms": "^2.4.2",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "react-typography": "^0.16.18",
     "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^0.85.0",
-    "typography": "^0.16.18",
-    "typography-theme-doelger": "^0.16.18",
-    "typography-theme-funston": "^0.16.18"
+    "semantic-ui-react": "^0.85.0"
   },
   "devDependencies": {
     "prettier": "^1.16.4"
