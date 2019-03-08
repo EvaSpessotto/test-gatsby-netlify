@@ -5,7 +5,7 @@
 
 Dans le cadre de la refonte du site de [commit42](https://www.commit42.fr/), j'ai créé ce repo test pour test la Stack que j'ai choisie.
 
-Pour en savoir plus sur mon choix de stack: [Lire mon article sur les technos choisies](https://www.commit42.fr/blog/un-nouveau-site-pour-une-nouvelle-annee/)
+Pour en savoir plus sur mon choix de stack: [Lire mon article](https://www.commit42.fr/blog/un-nouveau-site-pour-une-nouvelle-annee/)
 
 
 ## :fire: Demo 
@@ -21,7 +21,7 @@ git clone https://github.com/EvaSpessotto/test-gatsby-netlify.git
 ```
 
  #### 2. Installez les node_modules 
-Positonnez vous dans le dossier qui vient d'être créée:
+Positonnez vous dans le dossier qui vient d'être créé:
 
 ```
 cd test-gatsby-netlify
