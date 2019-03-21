@@ -1,3 +1,8 @@
 /*******************************
          Site Overrides
 *******************************/
+
+.ui.button {
+  background-color: #faf700;
+  color: green;
+}

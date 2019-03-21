@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Navigation from './global/Navigation'
 import Footer from './global/Footer'
+import "semantic-ui-less/semantic.less";
 
 const Layout = ({ children }) => {
   return (
